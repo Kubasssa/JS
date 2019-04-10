@@ -1,0 +1,98 @@
+body {
+  margin: 0  auto;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  min-width: 150px;
+  min-height: 200px;
+  max-width: 1200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body header {
+  width: calc(100%-10px);
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 40px;
+      flex-basis: 40px;
+}
+
+body section {
+  width: calc(100%-10px);
+  border-radius: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body section .left {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+body section .outsideSection {
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body section .outsideSection .insideHeader, body section .outsideSection .insideSection, body section .outsideSection .insideFooter {
+  background-color: #555;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+body section .right {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+body footer {
+  width: calc(100%-10px);
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 40px;
+      flex-basis: 40px;
+}
+/*# sourceMappingURL=style.css.map */

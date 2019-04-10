@@ -1,0 +1,137 @@
+<!-- Animacja trwa 1 sekundę z wyjątkiem ostatniego elementu w którym trwa 3 sekund (ta sama animacja, ale dłuższa) -->
+<!-- ostatni element ma odwrócony kierunek (reverse) -->
+<!-- Kolory elementów: lewy górny róg: czarny, prawy górny róg: czerwony, prawy dolny róg: zielony i lewy dolny róg: niebieski -->
+<!-- Zrób tylko jedną animację (keyframes) -->
+<!-- Opóźnienie .2s (kaażdy kolejny element) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            height: 30px;
+            width: 30px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        div:nth-child(1) {
+            animation: disco 1s infinite linear;
+
+        }
+
+        div:nth-child(2) {
+            animation: disco 1s .2s infinite linear;
+        }
+
+        div:nth-child(3) {
+            animation: disco 1s .4s infinite linear;
+        }
+
+        div:nth-child(4) {
+            animation: disco 1s .6s infinite linear;
+        }
+
+        div:nth-child(5) {
+            animation: disco 1s .8s infinite linear;
+        }
+
+        div:nth-child(6) {
+            animation: disco 3s infinite linear reverse;
+        }
+
+        @keyframes disco {
+            25% {
+                top: 0;
+                left: 100%;
+                transform: translateX(-100%);
+                background-color: red;
+
+            }
+
+            50% {
+                top: 100vh;
+                left: 100%;
+                transform: translate(-100%, -100%);
+                background-color: blue;
+            }
+
+            75% {
+                top: 100vh;
+                left: 0;
+                transform: translateY(-100%);
+                background-color: green;
+            }
+
+
+        }
+
+        @keyframes size {
+
+            1% {
+                height: 5px;
+                width: 100vh;
+            }
+
+            24% {
+                height: 5px;
+                width: 100vh;
+            }
+
+            26% {
+                height: 100vh;
+                width: 5px;
+            }
+
+            49% {
+                height: 100vh;
+                width: 5px;
+            }
+
+            51% {
+                height: 5px;
+                width: 100vh;
+            }
+
+            74% {
+                height: 5px;
+                width: 100vh;
+            }
+
+            76% {
+                height: 100vh;
+                width: 5px;
+            }
+
+            99% {
+                height: 100vh;
+                width: 5px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+
+</html>

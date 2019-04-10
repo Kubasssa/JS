@@ -176,6 +176,12 @@ window.addEventListener("DOMContentLoaded", function () {
         boxDFL.position = new BABYLON.Vector3(-1.3, -1.3, 0.7);
         boxDFL.rotation.y = Math.PI / 2;
 
+
+        // const boxTMP = BABYLON.MeshBuilder.CreateBox("box", {
+        //     size: 1,
+        //     depth: 0.01,
+        // }, scene);
+
         //--------------------END--------------------------------------------------------------------
         //--------------------Meterial Colors---------------------------------------------------------------
         const materialBlue = new BABYLON.StandardMaterial(scene);
@@ -228,11 +234,10 @@ window.addEventListener("DOMContentLoaded", function () {
         var light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(-2, -2, -2), scene);
 
         const CoR_At = new BABYLON.Vector3(0, 0, 0);
+        const CoR_At_RL = new BABYLON.Vector3(0, -1, 0);
+
         const pivot = new BABYLON.TransformNode("root");
         pivot.position = CoR_At;
-
-        const pivotU = new BABYLON.TransformNode("root");
-        pivotU.position = CoR_At;
 
         // box.parent = pivot;
         // box2.parent = pivot;
@@ -275,8 +280,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
         var angle = Math.PI / 2;
         var angle2 = -Math.PI / 2;
-        var axis = new BABYLON.Vector3(0, 2, 0);
-        var axisY = new BABYLON.Vector3(5, 0, 0);
+        var axis = new BABYLON.Vector3(0, 1, 0);
+        var axisY = new BABYLON.Vector3(1, 0, 0);
 
         scene.actionManager = new BABYLON.ActionManager(scene);
         scene.actionManager.registerAction(
@@ -285,19 +290,20 @@ window.addEventListener("DOMContentLoaded", function () {
                     parameter: "j"
                 },
                 function () {
-                    boxULF.parent = pivot;
-                    boxURF.parent = pivot;
-                    boxULB.parent = pivot;
-                    boxURB.parent = pivot;
-                    boxFLU.parent = pivot;
-                    boxFRU.parent = pivot;
-                    boxBLU.parent = pivot;
-                    boxBRU.parent = pivot;
-                    boxUFR.parent = pivot;
-                    boxUFL.parent = pivot;
-                    boxUBR.parent = pivot;
-                    boxUBL.parent = pivot;
-                    pivot.rotate(axis, angle, BABYLON.Space.WORLD);
+                    // boxULF.parent = pivot;
+                    // boxURF.parent = pivot;
+                    // boxULB.parent = pivot;
+                    // boxURB.parent = pivot;
+                    // boxFLU.parent = pivot;
+                    // boxFRU.parent = pivot;
+                    // boxBLU.parent = pivot;
+                    // boxBRU.parent = pivot;
+                    // boxUFR.parent = pivot;
+                    // boxUFL.parent = pivot;
+                    // boxUBR.parent = pivot;
+                    // boxUBL.parent = pivot;
+                    // pivot.rotate(axis, angle, BABYLON.Space.WORLD);
+
                 })
         )
 
@@ -307,19 +313,32 @@ window.addEventListener("DOMContentLoaded", function () {
                     parameter: "f"
                 },
                 function () {
-                    boxULF.parent = pivot;
-                    boxURF.parent = pivot;
-                    boxULB.parent = pivot;
-                    boxURB.parent = pivot;
-                    boxFLU.parent = pivot;
-                    boxFRU.parent = pivot;
-                    boxBLU.parent = pivot;
-                    boxBRU.parent = pivot;
-                    boxUFR.parent = pivot;
-                    boxUFL.parent = pivot;
-                    boxUBR.parent = pivot;
-                    boxUBL.parent = pivot;
-                    pivot.rotate(axis, angle2, BABYLON.Space.WORLD);
+                    // boxULF.parent = pivot;
+                    // boxURF.parent = pivot;
+                    // boxULB.parent = pivot;
+                    // boxURB.parent = pivot;
+                    // boxFLU.parent = pivot;
+                    // boxFRU.parent = pivot;
+                    // boxBLU.parent = pivot;
+                    // boxBRU.parent = pivot;
+                    // boxUFR.parent = pivot;
+                    // boxUFL.parent = pivot;
+                    // boxUBR.parent = pivot;
+                    // boxUBL.parent = pivot;
+                    // pivot.rotate(axis, angle2, BABYLON.Space.WORLD);
+
+                    // boxULF.material = materialYellow;
+                    // boxURF.material = materialYellow;
+                    // boxULB.material = materialWhite;
+                    // boxURB.material = materialWhite;
+                    // boxFLU.material = materialBlue;
+                    // boxFRU.material = materialBlue;
+                    // boxBLU.material = materialBlue;
+                    // boxBRU.material = materialBlue;
+                    // boxUFR.material = materialRed;
+                    // boxUFL.material = materialOrange;
+                    // boxUBR.material = materialRed;
+                    // boxUBL.material = materialOrange;
                 })
         )
 

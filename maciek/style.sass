@@ -1,0 +1,61 @@
+body
+    margin: 0  auto
+    padding: 0
+    height: 100vh
+    width: 100%
+    min-width: 150px
+    min-height: 200px
+    max-width: 1200px
+    box-sizing: border-box
+    background-color: #555
+    color: #fff
+    text-align: center
+    display: flex
+    flex-direction: column
+    header
+        width: calc(100%-10px)
+        margin: 5px
+        background-color: #bbb
+        border-radius: 10px
+        flex-basis: 40px
+    section
+        width: calc(100%-10px)
+        border-radius: 10px
+        flex-grow: 1
+        display: flex
+        flex-direction: row
+    
+        .left
+            flex-basis: 100px
+            margin: 5px
+            background-color: #bbb
+            border-radius: 10px
+            line-height: 100px
+        .outsideSection
+            margin: 5px
+            background-color: #bbb
+            border-radius: 10px
+            flex-grow: 1
+            display: flex
+            flex-direction: column
+            .insideHeader
+                background-color: #555
+                flex-grow: 1
+                border-radius: 10px
+                margin: 5px
+            .insideSection
+                @extend .insideHeader
+            .insideFooter
+                @extend .insideHeader
+        .right
+            flex-basis: 100px
+            margin: 5px
+            background-color: #bbb
+            border-radius: 10px
+            line-height: 100px
+    footer
+        width: calc(100%-10px)
+        margin: 5px
+        background-color: #bbb
+        border-radius: 10px
+        flex-basis: 40px

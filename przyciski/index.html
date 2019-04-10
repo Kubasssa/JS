@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            position: absolute;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 20vh;
+            height: 7vh;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        .button1 {
+            top: 10vh;
+            left: 20vw;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .button1::after {
+            content: "";
+            border-bottom: 3px solid black;
+            width: 20vh;
+            bottom: 0;
+            left: -100%;
+            position: absolute;
+            transition: .2s
+        }
+
+        .button1:hover::after {
+            left: 0;
+        }
+
+        .button2 {
+            border: 2px solid black;
+            box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+            border-radius: 15px;
+            top: 10vh;
+            left: 45vw;
+            overflow: hidden;
+            color: #000;
+            background-color: transparent;
+            transition: .3s;
+        }
+
+
+        .button2::after {
+            content: "";
+            background-color: #000;
+            transition: 0.3s;
+            position: absolute;
+            width: 20vh;
+            height: 7vh;
+            border-radius: 15px;
+            top: 100%;
+            left: calc(50% - 10vh);
+            z-index: -1;
+        }
+
+        .button2:hover::after {
+            top: 0;
+        }
+
+        .button2:hover {
+            color: #fff;
+        }
+
+
+        .button3 {
+            border: 3px solid black;
+            top: 10vh;
+            left: 70vw;
+            box-sizing: content-box;
+            overflow: hidden;
+            transition: 0.4s 0.2s;
+        }
+
+
+        .button3::after {
+            content: "";
+            background-color: rgb(182, 75, 75);
+            transition: left 0.3s, transform 0.3s 0.3s;
+            position: absolute;
+            width: 20vh;
+            height: 1vh;
+            top: calc(50% - 0.5vh);
+            left: 20vh;
+            transform: scaleY(1);
+            z-index: -1;
+        }
+
+        .button3:hover::after {
+            left: 0;
+            transform: scaleY(8);
+        }
+
+        .button3:hover {
+
+            color: #fff;
+        }
+
+
+        .button4 {
+            border: 3px solid black;
+            top: 40vh;
+            left: 45vw;
+            box-sizing: content-box;
+            overflow: hidden;
+            /* transition: 0.4s 0.2s; */
+        }
+
+        .button4::after {
+            content: "";
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            width: calc(7vh / 1.41);
+            height: calc(7vh / 1.41);
+            transform: rotate(45deg);
+            top: 13%;
+            left: -32%;
+            transition: 0.3s;
+        }
+
+        .button4:hover::after {
+            left: -15%;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button1">Przycisk</button>
+    <button class="button2">Przycisk</button>
+    <button class="button3">Przycisk</button>
+    <button class="button4">Przycisk</button>
+</body>
+
+</html>

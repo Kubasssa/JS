@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            border: solid 3px black;
+            padding: 100px
+        }
+
+        .ekran {
+            flex-basis: 20%;
+            background-color: #ddd;
+        }
+
+        .panel {
+            flex-grow: 1;
+            background-color: rgb(80, 175, 199);
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 50px;
+        }
+
+        .panel div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 30%;
+            background-color: rgb(50, 119, 146);
+            border: solid 3px black;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ekran"></div>
+    <div class="panel">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>+</div>
+        <div>-</div>
+        <div>/</div>
+        <div>.</div>
+        <div>*</div>
+        <div>C</div>
+        <div>=</div>
+        <div>0</div>
+    </div>
+</body>
+
+</html>

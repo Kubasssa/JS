@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        div {
+            flex-basis: 50%;
+        }
+
+        .left {
+            background-color: #fff;
+        }
+
+        .right {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="left"></div>
+    <div class="right"></div>
+
+
+    <script>
+        const leftBar = document.querySelector(".left");
+        const rightBar = document.querySelector(".right");
+        let color = "white";
+
+        leftBar.addEventListener("click", function () {
+            leftBar.style.backgroundColor = "red";
+            rightBar.style.backgroundColor = "white";
+        })
+
+        rightBar.addEventListener("click", function () {
+            leftBar.style.backgroundColor = "white";
+            rightBar.style.backgroundColor = "red";
+        })
+    </script>
+</body>
+
+</html>

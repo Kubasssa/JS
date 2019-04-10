@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+.baner {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(207, 77, 77);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+}
+
+.title {
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    left: 50%;
+    top: 23%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.title h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 80px;
+    color: rgb(34, 165, 154);
+    margin-bottom: 0;
+}
+
+.title p {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: rgb(34, 165, 154);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.baner img {
+    position: absolute;
+    width: 30%;
+    min-width: 200px;
+    top: 15vh;
+    left: 15vh;
+}
+
+.author {
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+    top: 95vh;
+    text-decoration: none;
+
+}
+
+.author a {
+    text-decoration: none;
+    color: rgb(34, 165, 154)
+}
+
+.gobutton {
+    height: 35px;
+    width: 130px;
+    position: relative;
+    display: block;
+    border: none;
+    background-color: rgb(27, 32, 47);
+    border: 4px solid rgb(27, 32, 47);
+    cursor: pointer;
+    overflow: hidden;
+    left: calc(50% - 65px);
+    margin-top: 10px;
+    animation: button 4s 2s infinite ease both;
+}
+
+.gobutton::before {
+    content: "Hover me!";
+    color: aliceblue;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    transition: all .3s;
+}
+
+.gobutton:hover::before {
+    top: -50%;
+}
+
+.gobutton::after {
+    content: "";
+    color: #f0f8ff;
+    border-top: 10px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    transition: all .3s;
+}
+
+.gobutton:hover::after {
+    top: 35%;
+}
+
+.gobutton:hover {
+    background-color: rgb(41, 47, 70);
+}
+
+.main.swipedown {
+    top: 0;
+}
+
+.main {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 100vh;
+    transition: 0.1s;
+    z-index: -1;
+}
+
+
+nav {
+    position: absolute;
+    width: 160px;
+    height: 400px;
+    background-color: rgb(78, 136, 212);
+    line-height: 80px;
+    top: 10vh;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+
+}
+
+.bord {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 80vw;
+    height: 80vh;
+    border: 5px solid rgb(78, 136, 212);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 
+.bord::before {
+    position: absolute;
+    content: "Monday Tuesday Wednesday Thursday Friday";
+    border: 1px solid rgb(78, 136, 212);
+    transform: rotate(90deg);
+    width: 73vh;
+    text-align: center;
+    word-spacing: 70px;
+    top: 52.5%;
+    left: -21.5%;
+} */
+
+.time {
+    display: flex;
+    flex-grow: 1;
+    border: 1px solid rgb(78, 136, 212);
+    flex-basis: 8%;
+
+}
+
+.time div {
+    flex-basis: 9%;
+    background-color: #ddd;
+}
+
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday {
+    border: 1px solid rgb(78, 136, 212);
+    flex-basis: 20%;
+}
+
+.back {
+    position: absolute;
+    width: 12vh;
+    height: 4vh;
+    background-color: transparent;
+    border: 4px solid rgb(41, 47, 70);
+    border-radius: 5px;
+    left: 2vh;
+    bottom: 40vh;
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+    text-align: center;
+    line-height: 3vh;
+    z-index: 1;
+}
+
+.back::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(41, 47, 70);
+    width: 12vh;
+    height: 8vh;
+    transition: .3s;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+.back:hover::after {
+    top: 0;
+
+}
+
+.back:hover {
+    color: rgb(235, 217, 196);
+}
+
+.main.swipeup {
+    top: 100vh;
+}
+
+
+
+@keyframes button {
+    0% {
+        left: calc(50% - 65px);
+    }
+
+    90% {
+        left: calc(50% - 65px);
+    }
+
+    91% {
+        left: calc(50% - 80px);
+    }
+
+    92% {
+        left: calc(50% - 50px);
+    }
+
+    93% {
+        left: calc(50% - 80px);
+    }
+
+    94% {
+        left: calc(50% - 50px);
+    }
+
+    95% {
+        left: calc(50% - 80px);
+    }
+
+    96% {
+        left: calc(50% - 50px);
+    }
+
+    97% {
+        left: calc(50% - 80px);
+    }
+
+    98% {
+        left: calc(50% - 50px);
+    }
+
+    99% {
+        left: calc(50% - 80px);
+    }
+
+    100% {
+        left: calc(50% - 50px);
+    }
+
+
+}

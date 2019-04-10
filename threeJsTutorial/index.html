@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+
+
+        var geometry = new THREE.BoxGeometry(10, 10, 10);
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+
+
+        controls.addEventListener('change', render);
+        controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+        controls.dampingFactor = 0.25;
+        controls.screenSpacePanning = false;
+        controls.minDistance = 100;
+        controls.maxDistance = 500;
+        controls.maxPolarAngle = Math.PI / 2;
+
+        function render() {
+            renderer.render(scene, camera);
+        }
+
+        var cubeColors = [
+            new THREE.MeshBasicMaterial({
+                color: "red",
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            }),
+            new THREE.MeshBasicMaterial({
+                color: "blue",
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            }),
+            new THREE.MeshBasicMaterial({
+                color: "yellow",
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            }),
+            new THREE.MeshBasicMaterial({
+                color: "red",
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            }),
+            new THREE.MeshBasicMaterial({
+                color: "blue",
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            }),
+            new THREE.MeshBasicMaterial({
+                color: "yellow",
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.5,
+            }),
+        ];
+        var material = new THREE.MeshFaceMaterial(cubeColors);
+
+        var topRightFront = new THREE.Mesh(geometry, material);
+        topRightFront.material.transparent = true;
+        topRightFront.material.opacity = 1;
+        scene.add(topRightFront);
+
+        var topLeftFront = new THREE.Mesh(geometry, material);
+        topLeftFront.material.transparent = true;
+        topLeftFront.material.opacity = 1;
+        scene.add(topLeftFront);
+
+        var topRightBack = new THREE.Mesh(geometry, material);
+        topRightBack.material.transparent = true;
+        topRightBack.material.opacity = 1;
+        scene.add(topRightBack);
+
+        var topLeftBack = new THREE.Mesh(geometry, material);
+        topLeftBack.material.transparent = true;
+        topLeftBack.material.opacity = 1;
+        scene.add(topLeftBack);
+
+        var bottomRightFront = new THREE.Mesh(geometry, material);
+        bottomRightFront.material.transparent = true;
+        bottomRightFront.material.opacity = 1;
+        scene.add(bottomRightFront);
+
+        var bottomLeftFront = new THREE.Mesh(geometry, material);
+        bottomLeftFront.material.transparent = true;
+        bottomLeftFront.material.opacity = 1;
+        scene.add(bottomLeftFront);
+
+        var bottomRightBack = new THREE.Mesh(geometry, material);
+        bottomRightBack.material.transparent = true;
+        bottomRightBack.material.opacity = 1;
+        scene.add(bottomRightBack);
+
+        var bottomLeftBack = new THREE.Mesh(geometry, material);
+        bottomLeftBack.material.transparent = true;
+        bottomLeftBack.material.opacity = 1;
+        scene.add(bottomLeftBack);
+        camera.position.z = 5;
+
+        topRightFront.position.x = 0;
+        topLeftFront.position.x = 10;
+        topRightBack.position.x = 10, topRightBack.position.z = -10;
+        topLeftBack.position.x = 0, topLeftBack.position.z = -10;
+        bottomRightFront.position.x = 10, bottomRightFront.position.y = -10;
+        bottomLeftFront.position.x = 0, bottomLeftFront.position.y = -10;
+        bottomRightBack.position.x = 10, bottomRightBack.position.y = -10, bottomRightBack.position.z = -10;
+        bottomLeftBack.position.x = 0, bottomLeftBack.position.y = -10, bottomLeftBack.position.z = -10;
+
+
+        var animate = function () {
+            requestAnimationFrame(animate);
+
+            topLeft.rotation.x += 0.01;
+            topLeft.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        };
+
+        renderer.render(scene, camera);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 300vh;
+}
+
+body div {
+  position: fixed;
+  width: 100%;
+  height: 10px;
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .klik {
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  left: 50%;
+  top: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 30px;
+  background-color: white;
+  border: 2px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body .klik:hover {
+  background-color: #000;
+  color: white;
+}
+
+body section {
+  position: absolute;
+  top: 10%;
+  height: 90%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body section .square {
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px;
+  height: 50px;
+  background-color: #000;
+  color: white;
+  margin: 10px;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+
+body section .circle {
+  -ms-flex-preferred-size: 44px;
+      flex-basis: 44px;
+  height: 44px;
+  background-color: #fff;
+  border: 2px solid black;
+  color: black;
+  margin: 10px;
+  font-size: 30px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
